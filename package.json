@@ -1,0 +1,47 @@
+{
+  "name": "guardiancart",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "GuardianCart: Rosa's shopping and payment safety helper (Cal Hacks 13.0)",
+  "engines": {
+    "node": ">=20.4"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c blue,magenta \"tsx watch server/index.ts\" \"vite\"",
+    "build": "vite build",
+    "start": "vite build && tsx server/index.ts",
+    "serve": "tsx server/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "screenshots": "node scripts/screenshots.mjs",
+    "record-demo": "node scripts/record-demo.mjs",
+    "txn": "node scripts/txn.mjs",
+    "reset:home": "node -e \"require('fs').rmSync('data/home.json',{force:true});console.log('Rosa and Priya\\'s app data cleared (stop the server first).')\"",
+    "verify": "vite build && node scripts/verify-mvp.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@moss-js/moss": "^1.21.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "playwright": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^4.1.12"
+  }
+}
