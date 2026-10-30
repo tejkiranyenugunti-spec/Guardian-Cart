@@ -21,7 +21,7 @@ If the answer shows a scam, the money stays stopped, they are told to hang up, a
 
 ---
 
-## 👵 Rosa's story
+##  Rosa's story
 
 > Rosa and Priya are fictional personas. All card activity in this project is **simulated**.
 
@@ -31,7 +31,7 @@ If the answer shows a scam, the money stays stopped, they are told to hang up, a
 Priya proposes a few safety rules, for example *"check in with me when a pharmacy purchase is far above my normal."* Rosa reads them, changes what she wants, and **co-signs** them herself. Nothing is imposed on her.
 
 **2. Normal life stays normal.**
-Rosa buys $46 of groceries at Safeway. ✅ Approved instantly. No alerts, no approvals, nobody is bothered.
+Rosa buys $46 of groceries at Safeway.  Approved instantly. No alerts, no approvals, nobody is bothered.
 
 **3. Then the phone rings.**
 A man claiming to be from "Microsoft" says her computer is hacked and she must pay with gift cards. Rosa goes to CVS and tries to spend **$500**, far more than she ever spends there.
@@ -53,7 +53,7 @@ A man claiming to be from "Microsoft" says her computer is hacked and she must p
 
 ---
 
-## 🌍 Why it matters for society
+## Why it matters for society
 
 Elder fraud is large and growing:
 
@@ -67,11 +67,11 @@ Elder fraud is large and growing:
 
 **How GuardianCart helps:**
 
-- 💸 **Stops losses before they happen.** It intervenes at the payment itself, not weeks later, and not by monitoring phone calls.
-- 🧓 **Protects independence and dignity.** Older adults strongly prefer managing their own finances ([NYU Stern](https://www.stern.nyu.edu/sites/default/files/assets/documents/Ind_Myth_Exec_Summary_rev_050417.pdf)). Rosa co-signs every rule, can always ask *"Why was this paused?"*, and her family receives alerts but never becomes an approver.
-- ❤️ **Reduces caregiver stress.** Families get one meaningful alert at the moment it matters, instead of constant pings or taking over a parent's bank account.
-- ♿ **Accessible by design.** Voice-first, slow and calm speech, large captions and big buttons. Typing and quick replies always work as alternatives.
-- 🤝 **Builds trust in AI for payments.** The AI only *analyzes*; fixed, auditable rules make every money decision (see below).
+-  **Stops losses before they happen.** It intervenes at the payment itself, not weeks later, and not by monitoring phone calls.
+   **Protects independence and dignity.** Older adults strongly prefer managing their own finances ([NYU Stern](https://www.stern.nyu.edu/sites/default/files/assets/documents/Ind_Myth_Exec_Summary_rev_050417.pdf)). Rosa co-signs every rule, can always ask *"Why was this paused?"*, and her family receives alerts but never becomes an approver.
+-  **Reduces caregiver stress.** Families get one meaningful alert at the moment it matters, instead of constant pings or taking over a parent's bank account.
+-  **Accessible by design.** Voice-first, slow and calm speech, large captions and big buttons. Typing and quick replies always work as alternatives.
+-  **Builds trust in AI for payments.** The AI only *analyzes*; fixed, auditable rules make every money decision (see below).
 
 > **Honest scope:** GuardianCart targets the card and gift-card slice of elder fraud. The largest total losses go through bank transfers and crypto (FTC), which this project does not cover.
 
@@ -83,7 +83,7 @@ Elder fraud is large and growing:
  Card payment ──► Transaction provider ──► Policy engine (co-signed rules)
                                                │
                           normal ◄─────────────┼─────────────► unusual
-                       ✅ approve              │            ⏸️ pause + voice check-in
+                        approve              │             pause + voice check-in
                                                ▼
                                Rosa answers (voice / button / text)
                                                │
@@ -92,9 +92,9 @@ Elder fraud is large and growing:
                                                │
                               Policy engine decides, fixed code acts
                                  │                          │
-                         ✅ genuine: Rosa continues   ⛔ scam: blocked,
+                         genuine: Rosa continues    scam: blocked,
                                                         Rosa told to hang up,
-                                                        Priya alerted 🔴
+                                                        Priya alerted 
 ```
 
 ### Safety by design
@@ -105,7 +105,7 @@ Elder fraud is large and growing:
 
 ---
 
-## ✨ Features
+##  Features
 
 **For Rosa (tablet):**
 - Reviews, edits and co-signs safety rules on first run
@@ -122,7 +122,7 @@ Elder fraud is large and growing:
 
 ---
 
-## 🚀 Quick start
+##  Quick start
 
 Requires **Node.js 20.4+**.
 
@@ -146,10 +146,10 @@ Add `?mute=1` to any URL to silence voice on that screen.
 ### Try it: send simulated card transactions
 
 ```bash
-npm run txn -- --merchant "Safeway" --mcc 5411 --amount 46.18          # ✅ approved (normal)
-npm run txn -- --merchant "CVS Pharmacy" --mcc 5912 --amount 500       # ⏸️ paused, Rosa gets a check-in
+npm run txn -- --merchant "Safeway" --mcc 5411 --amount 46.18          # approved (normal)
+npm run txn -- --merchant "CVS Pharmacy" --mcc 5912 --amount 500       #  paused, Rosa gets a check-in
 npm run txn -- --merchant "QuickWire" --mcc 4829 --amount 900 \
-               --type funds_transfer --channel online                  # ⛔ blocked
+               --type funds_transfer --channel online                  #  blocked
 ```
 
 Or use `/card-simulator`, or POST directly:
@@ -163,7 +163,7 @@ Event fields: `transaction_id, card_id, merchant, merchant_category (MCC), amoun
 
 ---
 
-## 🔑 Configuration (all optional)
+##  Configuration (all optional)
 
 Copy `.env.example` to `.env` and fill in whatever you have:
 
@@ -177,7 +177,7 @@ Set `GUARDIANCART_OFFLINE=1` to force every external service off and rehearse th
 
 ---
 
-## 🧪 Tests
+##  Tests
 
 ```bash
 npm test               # 58 tests: policy, classifier, flows, Claude misbehaving, pipeline, provider swap, persistence, rule changes
@@ -202,7 +202,7 @@ Household data is stored in `data/<household>.json` (atomic writes, never secret
 
 ---
 
-## 🗂️ Project structure
+##  Project structure
 
 ```
 server/        Express API: transaction pipeline, guardian check-in flow, Claude agent, voice, memory, persistence
@@ -220,7 +220,7 @@ scripts/       Transaction sender, Playwright verification, screenshot and demo 
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - **Simulated card network.** Transactions come from a simulator, not real Visa authorizations. `server/transactions.ts` defines a `VisaTransactionProvider` interface so a real Visa integration can replace the simulator without changing the policy engine or apps.
 - **Demo household.** One hard-coded family, no authentication. Not for real financial use.
