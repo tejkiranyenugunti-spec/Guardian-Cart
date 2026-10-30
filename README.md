@@ -53,6 +53,37 @@ A man claiming to be from "Microsoft" says her computer is hacked and she must p
 
 ---
 
+## Screenshots
+
+**The check-in:** the $500 CVS payment is paused, and Rosa is asked the one question that matters.
+
+![Rosa's tablet asks if someone is on the phone, while Priya sees a calm check-in note](docs/images/04-checkin.png)
+
+**The scam is caught:** Rosa is told to hang up and the payment is blocked, while Priya's phone turns red with what the card saw, what Mom said, and a Call Mom button.
+
+![Rosa is told to hang up, and Priya gets an urgent red alert](docs/images/05-outcome.png)
+
+<details>
+<summary><b>See the full flow (4 more screens)</b></summary>
+
+**1. Rosa and Priya review the safety rules together**
+![Setup screen with proposed rules](docs/images/01-setup.png)
+
+**2. Both agree to the rules**
+![Rules agreed on both devices](docs/images/02-agreed.png)
+
+**3. A normal grocery purchase goes through without interrupting anyone**
+![Normal Safeway purchase approved](docs/images/03-grocery.png)
+
+**4. Rosa can always ask "Why was this paused?"**
+![Explanation of why the payment was paused](docs/images/06-why.png)
+
+</details>
+
+> Screenshots are from presentation mode (`/stage`), running without API keys, so the status badges show the built-in fallbacks. All card activity is simulated.
+
+---
+
 ## Why it matters for society
 
 Elder fraud is large and growing:
@@ -68,7 +99,7 @@ Elder fraud is large and growing:
 **How GuardianCart helps:**
 
 -  **Stops losses before they happen.** It intervenes at the payment itself, not weeks later, and not by monitoring phone calls.
-   **Protects independence and dignity.** Older adults strongly prefer managing their own finances ([NYU Stern](https://www.stern.nyu.edu/sites/default/files/assets/documents/Ind_Myth_Exec_Summary_rev_050417.pdf)). Rosa co-signs every rule, can always ask *"Why was this paused?"*, and her family receives alerts but never becomes an approver.
+-  **Protects independence and dignity.** Older adults strongly prefer managing their own finances ([NYU Stern](https://www.stern.nyu.edu/sites/default/files/assets/documents/Ind_Myth_Exec_Summary_rev_050417.pdf)). Rosa co-signs every rule, can always ask *"Why was this paused?"*, and her family receives alerts but never becomes an approver.
 -  **Reduces caregiver stress.** Families get one meaningful alert at the moment it matters, instead of constant pings or taking over a parent's bank account.
 -  **Accessible by design.** Voice-first, slow and calm speech, large captions and big buttons. Typing and quick replies always work as alternatives.
 -  **Builds trust in AI for payments.** The AI only *analyzes*; fixed, auditable rules make every money decision (see below).
